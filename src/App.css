@@ -37,6 +37,12 @@ body {
     background-image: url("./assets/background.jpg");
   }
 
+  .loading-gif {
+    height: 20px;
+    object-fit: none;
+    width: 90px;
+  }
+
   footer {
     background-color: #fff;
     width: 100%;

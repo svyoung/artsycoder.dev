@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import SendIcon from '@mui/icons-material/Send';
+import loadingGif from "../assets/loading.gif";
 
 interface Message {
     role: string,
@@ -37,11 +38,11 @@ export default function Chatbox({ messages, loading, submitMessage }:Props) {
             <div ref={scrollableDivRef} className="text-stream mb-2 h-100 flex justify-start overflow-auto flex-[1_0_auto]">
                 <ul className="w-full">
                     {messages?.map((message, index) => (
-                        <li key={message.content + index} className={`${message.role === "user" ? "bg-[#8ab1a5] mr-[0] ml-[auto] text-white" : "bg-[#ffffff]"} relative my-5 py-1 px-4 max-w-max lg:w-[60%] rounded-xl break-words shadow-md`}>
+                        <li key={message.content + index} className={`${message.role === "user" ? "bg-[#8ab1a5] mr-[0] ml-[auto] text-white" : "bg-[#ffffff]"} relative my-3 py-1 px-4 max-w-max lg:w-[60%] rounded-xl break-words shadow-md`}>
                         {message.content}
                     </li>
                     ))}
-                    {loading && <li>Loading...</li>}
+                    {loading && <li><img src={loadingGif} className="loading-gif" alt="loading..." /></li>}
                 </ul>
             </div>
             <div className="relative flex-[0_0_auto] flex flex-col">
