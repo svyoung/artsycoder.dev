@@ -3,7 +3,7 @@ import Chatbox from "./Chatbox";
 import TypeWriter from "./TypeWriter";
 import { getOpenAIResponse, MessageType } from "../../utils/chatClient";
 
-const introMessage = "Hi! I am Sam and welcome to my page. To get started, I have my personal assistant, Loona, to help you out when any questions about me. She will mainly give you information about my professional experience, but she might be able to tell you what my favorite dessert is, too. Maybe... :)"
+const introMessage = "Hi! I am Sam and welcome to my page. To get started, I have my personal assistant, Dilly, to help you out when any questions about me. She will mainly give you information about my professional experience, but she might be able to tell you what my favorite dessert is, too. Maybe... :)"
 
 export default function IntroPage() {
     const [messages, setMessages] = useState<MessageType[]>([])

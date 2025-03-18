@@ -46,7 +46,7 @@ export default function Chatbox({ messages, loading, submitMessage }:Props) {
                 </ul>
             </div>
             <div className="relative flex-[0_0_auto] flex flex-col">
-                <input type="text" value={textMessage} onKeyDown={sendMessage} onChange={e => setTextMessage(e.target.value)} placeholder="ask Loona!" className="relative block p-2 rounded-[3rem] border-2 bg-white border-[#cecece]" />
+                <input type="text" value={textMessage} onKeyDown={sendMessage} onChange={e => setTextMessage(e.target.value)} placeholder="ask Dilly!" className="relative block p-2 rounded-[3rem] border-2 bg-white border-[#cecece]" />
                 <SendIcon className="absolute right-3 top-3 cursor-pointer" sx={{ color: "#90b7ab", fontSize: "1rem"}} />
             </div>
         </div>
