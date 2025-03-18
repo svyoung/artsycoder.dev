@@ -1,4 +1,7 @@
-import { Message} from "../../types/types";
+export interface Message {
+    role: string,
+    content: string
+}
 
 interface Props {
     message: Message,
