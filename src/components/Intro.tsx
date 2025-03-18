@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Chatbox from "./Chatbox";
+import Chatbox from "./Chatbox/index";
 import TypeWriter from "./TypeWriter";
 import { getOpenAIResponse, MessageType } from "../../utils/chatClient";
 
