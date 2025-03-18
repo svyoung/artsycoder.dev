@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import githubLogo from "../assets/github-mark.svg";
 
+interface Project {
+    name: string,
+    id: string,
+    url: string,
+    description: string
+}
+type Projects = Project[];
+
 export default function Projects() {
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState<Projects>([]);
 
     useEffect(() => {
         fetch("https://api.github.com/graphql", {
@@ -34,7 +42,6 @@ export default function Projects() {
         .catch((err) => console.error(err));
     }, []);
 
-    console.log("projects", projects);
     const linkCss = `font-bold underline`;
 
     return (
