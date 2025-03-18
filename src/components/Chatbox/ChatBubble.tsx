@@ -19,7 +19,6 @@ export default function ChatBubble({message, index}:Props) {
                 {message.content}
                 <div className={`${message.role === "user" ? "right-[-9px] bg-[#8ab1a5]": "bg-white left-[-10px]"} bottom-[-5px] absolute w-[18px] h-[18px] rounded-xl shadow-md z-[10]`}></div>
             </div>
-            
         </li>
     )
 }
