@@ -2,8 +2,11 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import ChatBubble from "./ChatBubble";
 import SendIcon from "@mui/icons-material/Send";
 import loadingGif from "../../assets/loading.gif";
-import { Message } from "../../types/types";
 
+export interface Message {
+    role: string,
+    content: string
+}
 type Messages = Message[];
 
 interface Props {
@@ -31,8 +34,8 @@ export default function Chatbox({ messages, loading, submitMessage }:Props) {
     }, [messages, submitMessage]);
 
     return (
-        <div className="mt-3 mb-2 w-full h-full flex flex-col justify-between">
-            <div ref={scrollableDivRef} className="text-stream mb-2 h-100 flex justify-start overflow-auto flex-[1_0_auto]">
+        <div className="chatbox-main mt-3 mb-2 w-full">
+            <div ref={scrollableDivRef} className="text-stream mb-2 h-100 overflow-auto">
                 <ul className="w-full">
                     {messages?.map((message, index) => (
                         <ChatBubble message={message} index={index} />
@@ -40,9 +43,9 @@ export default function Chatbox({ messages, loading, submitMessage }:Props) {
                     {loading && <li><img src={loadingGif} className="loading-gif" alt="loading..." /></li>}
                 </ul>
             </div>
-            <div className="relative flex-[0_0_auto] flex flex-col">
-                <input type="text" value={textMessage} onKeyDown={sendMessage} onChange={e => setTextMessage(e.target.value)} placeholder="ask Dilly!" className="relative block p-2 rounded-[3rem] border-2 bg-white border-[#cecece]" />
-                <div role="button" className="absolute right-3 top-2 cursor-pointer" onClick={() => {
+            <div className="relative message-bar">
+                <input type="text" value={textMessage} onKeyDown={sendMessage} onChange={e => setTextMessage(e.target.value)} placeholder="ask Dilly!" className="relative block p-3 rounded-[3rem] border-2 bg-white border-[#cecece] w-full" />
+                <div role="button" className="absolute right-4 top-3 cursor-pointer" onClick={() => {
                     if(textMessage !== "") {
                         submitMessage(textMessage);
                         setTextMessage("")

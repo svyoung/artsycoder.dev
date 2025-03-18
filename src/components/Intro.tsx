@@ -40,12 +40,12 @@ export default function IntroPage() {
     }
 
     return (
-        <div className="pt-14 px-4 mb-2 sm:w-full text-[0.9rem] md:w-3/4 md:text-[1rem] lg:w-1/2 m-auto flex flex-col min-h-90 h-[100vh] justify-between text-[#555555] shadow-lg">
-            <div className="chatbox-wrapper border border-[#efefef] p-3 sm:px-4 rounded-xl flex flex-col min-h-90 h-[100vh] justify-between relative">
+        <div className="shadow-lg">
+            <div className="chatbox-wrapper border border-[#efefef] p-3 sm:px-4 rounded-xl min-h-90 h-[100vh] justify-between relative">
                 {showIntroMsg && <div className="absolute m-4 top-0 left-0 right-0 bottom-0">
                     <TypeWriter text={introMessage} />
                 </div>}
-                <div className="flex flex-col h-[100vh]">
+                <div className="relative overflow-hidden">
                     <Chatbox messages={messages} loading={loading} submitMessage={submitMessage} />
                 </div>
             </div>
