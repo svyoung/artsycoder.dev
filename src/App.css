@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+@import "tailwindcss";
+
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+@media (min-width: 200px) {
+  #root {
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 30px 1fr 30px 30px;
+    height: 100vh;
+  }
+
+  main {
+    overflow: auto;
+  }
+
+  .header {
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 1px 1px 1px #ccc;
+  }
+
+  .chatbox-wrapper {
+    background-image: url("./assets/background.jpg");
+  }
+
+  footer {
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    border-top: 1px solid #cecece;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 0.2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  #root {
+  }
+}
+
+
