@@ -12,7 +12,7 @@ export default function AboutMe() {
         <div>
             <h3 className="text-xl font-bold pb-3">About</h3>
             <p>
-                <a className="underline font-bold text-lg" href="https://svy-storage-s3-v1.s3.us-east-2.amazonaws.com/SamYoung_2025_CV_SeniorSoftwareEngineer.pdf">DOWNLOAD MY RESUME</a>
+                <a className="underline font-bold text-lg" href="https://svy-stuff.s3.us-west-2.amazonaws.com/SamYoung_2025_CV_SeniorSoftwareEngineer.pdf">DOWNLOAD MY RESUME</a>
             </p>
             <p>
                 Thanks for coming! Here you will find projects I've done since I was a wee starter engineer, until now. 
