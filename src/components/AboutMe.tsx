@@ -1,13 +1,13 @@
 
 
 export default function AboutMe() {
-    const frontEnd = [
-        "JavaScript", "TypeScript", "React", "Redux", "NextJS", "HTML", "CSS", "GraphQL", "WebSockets", "RESTful", "API", "Jest/RTL/Cypress"
-    ];
-    const backEnd = [
-        "Node", "Python", "MySQL", "MongoDB (NoSQL)", "AI", "LLMs", "OpenAI", "AWS EC2/S3/RDS", "CI/CD", "Netlify"
-    ];
-    const pillCss = `bg-[#8bafa3] text-white inline-block px-2 py-1 m-1 rounded-lg shadow-xs text-xs`;
+    // const frontEnd = [
+    //     "JavaScript", "TypeScript", "React", "Redux", "NextJS", "HTML", "CSS", "GraphQL", "WebSockets", "RESTful", "API", "Jest/RTL/Cypress"
+    // ];
+    // const backEnd = [
+    //     "Node", "Python", "MySQL", "MongoDB (NoSQL)", "AI", "LLMs", "OpenAI", "AWS EC2/S3/RDS", "CI/CD", "Netlify"
+    // ];
+    // const pillCss = `bg-[#8bafa3] text-white inline-block px-2 py-1 m-1 rounded-lg shadow-xs text-xs`;
     return (
         <div>
             <h3 className="text-xl font-bold pb-3">About</h3>
